@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Gallery</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sanitize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <nav id="main-nav" class="topnav">
+      <a class="nav-item logo">
+        <span class="label"><i class="fas fa-home"></i>Home</span>
+      </a>
+      <a class="nav-item">
+        <span class="label"><i class="fas fa-blog"></i>Blog</span>
+      </a>
+      <a class="nav-item">
+        <span class="label"><i class="fas fa-info-circle"></i>About</span>
+      </a>
+      <a class="nav-item more">
+        <span class="label"><i class="fas fa-ellipsis-h"></i>More</span>
+      </a>
+      <a href="#" class="nav-item trigram" id="menu">&#9776;</a>
+    </nav>
+
+    <main>
+      <div class="slideshow">
+        <div class="slides fader">
+          <div class="numbertext">1 / 3</div>
+          <img src="img/slide1.jpg"/>
+          <div class="text">Strikingly beautiful Swiss mountains.</div>
+        </div>
+
+        <div class="slides fader">
+          <div class="numbertext">2 / 3</div>
+          <img src="img/slide2.jpg"/>
+          <div class="text">Traversing an ominous foggy trail.</div>
+        </div>
+
+        <div class="slides fader">
+          <div class="numbertext">3 / 3</div>
+          <img src="img/slide3.jpg"/>
+          <div class="text">A bridge through the woods, illuminated by sunbeams.</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <div class="dots" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <div id="ex1" class="modal fade">
+        <div class="modal-dialog" role:"document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="img/modal1.jpg" alt="Star Flowers"/>
+              <div class="cardbody">
+                <h3> STAR FLOWERS </h3>
+                <p>That's right, these flowers look like little stars.
+                A perfect gift for that special someone . . . Morbi vehicula
+                feugiat enim, non feugiat ligula consectetur nec. Integer nunc
+                nibh, dictum laoreet iaculis vitae, suscipit vel nulla.
+                Nulla posuere nunc sem, vel consequat tellus cursus sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex2" class="modal fade">
+        <div class="modal-dialog" role:"document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="img/modal2.jpg" alt="A Cow"/>
+              <div class="cardbody">
+                <h3> MENACING COW </h3>
+                <p>She knows your secrets. Don't you worry, she won't tell
+                  anyone. But she knows . . . Morbi vehicula
+                  feugiat enim, non feugiat ligula consectetur nec. Integer nunc
+                  nibh, dictum laoreet iaculis vitae, suscipit vel nulla.
+                  Nulla posuere nunc sem, vel consequat tellus cursus sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex3" class="modal fade">
+        <div class="modal-dialog" role:"document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="img/modal3.jpg" alt="A Bird"/>
+              <div class="cardbody">
+                <h3> INTERESTING BIRD </h3>
+                <p>I'm not entirely sure what species of bird this is, but it's
+                  certainly unique and nice to look at . . . Morbi vehicula
+                  feugiat enim, non feugiat ligula consectetur nec. Integer nunc
+                  nibh, dictum laoreet iaculis vitae, suscipit vel nulla.
+                  Nulla posuere nunc sem, vel consequat tellus cursus sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex4" class="modal fade">
+        <div class="modal-dialog" role:"document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="img/modal4.jpg" alt="A tired dog"/>
+              <div class="cardbody">
+                <h3> TIME FOR A NAP </h3>
+                <p>This old boy has been playing all day. It's time for this
+                  sleepy dog to take a nap . . . Morbi vehicula
+                  feugiat enim, non feugiat ligula consectetur nec. Integer nunc
+                  nibh, dictum laoreet iaculis vitae, suscipit vel nulla.
+                  Nulla posuere nunc sem, vel consequat tellus cursus sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex5" class="modal fade">
+        <div class="modal-dialog" role:"document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="img/modal5.jpg" alt="Miami Sunset"/>
+              <div class="cardbody">
+                <h3> THE SUN SETS OVER MIAMI </h3>
+                <p>A man in a floral print button-down and khakis rolls into frame.
+                  Synths can be heard in the background . . . Morbi vehicula
+                  feugiat enim, non feugiat ligula consectetur nec. Integer nunc
+                  nibh, dictum laoreet iaculis vitae, suscipit vel nulla.
+                  Nulla posuere nunc sem, vel consequat tellus cursus sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex6" class="modal fade">
+        <div class="modal-dialog" role:"document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="img/modal6.jpg" alt="Lighthouse Island"/>
+              <div class="cardbody">
+                <h3> A QUAINT ISLAND </h3>
+                <p>This little island with a small house and lighthouse has all
+                  you need to enjoy relaxing days. Sometimes less is more . . .
+                  Morbi vehicula feugiat enim, non feugiat ligula consectetur
+                  nec. Integer nunc nibh, dictum laoreet iaculis vitae, suscipit
+                  vel nulla. Nulla posuere nunc sem, vel consequat tellus cursus sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex7" class="modal fade">
+        <div class="modal-dialog" role:"document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="img/modal7.jpg" alt="Snowy Mountain"/>
+              <div class="cardbody">
+                <h3> ON THE MOUNTAIN WHERE I STAY... </h3>
+                <p>There ain't no night or day. Just a golden glowing radiance that
+                scares away the pain, and I am home. I call it home. I've got a home.
+                I'm finally home. They say home is where the heart is, but to us it's
+                where guitars is and the people playin' songs for all the animals to hear,
+                and I am home. I call it home. I've got a home.
+                I'm finally home.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex8" class="modal fade">
+        <div class="modal-dialog" role:"document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="img/modal8.jpg" alt="Traditional Architecture"/>
+              <div class="cardbody">
+                <h3> TRADITIONAL ARCHITECTURE </h3>
+                <p>It was regal, it was bulky, it was marvellous. Traditional architecture
+                  was an artform, and a statement of class . . . Morbi vehicula
+                  feugiat enim, non feugiat ligula consectetur nec. Integer nunc
+                  nibh, dictum laoreet iaculis vitae, suscipit vel nulla.
+                  Nulla posuere nunc sem, vel consequat tellus cursus sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex9" class="modal fade">
+        <div class="modal-dialog" role:"document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="img/modal9.jpg" alt="Sunny Beach"/>
+              <div class="cardbody">
+                <h3> SURF'S UP! </h3>
+                <p>At a beautiful beach on a vibrant day, why not hit the waves?
+                  It's a shame we can't surf all the time . . . Morbi vehicula
+                  feugiat enim, non feugiat ligula consectetur nec. Integer nunc
+                  nibh, dictum laoreet iaculis vitae, suscipit vel nulla.
+                  Nulla posuere nunc sem, vel consequat tellus cursus sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex10" class="modal fade">
+        <div class="modal-dialog" role:"document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="img/modal10.jpg" alt="Little Turtle"/>
+              <div class="cardbody">
+                <h3> LITTLE MAN </h3>
+                <p>How could you not like this handsome little rascal? He is
+                  literally the definition of the word "flawless" . . . Morbi vehicula
+                  feugiat enim, non feugiat ligula consectetur nec. Integer nunc
+                  nibh, dictum laoreet iaculis vitae, suscipit vel nulla.
+                  Nulla posuere nunc sem, vel consequat tellus cursus sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex11" class="modal fade">
+        <div class="modal-dialog" role:"document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="img/modal11.jpg" alt="Rainbow Flower"/>
+              <div class="cardbody">
+                <h3> WONDROUS FLOWER </h3>
+                <p> Forget color wheels and color pickers. Just pick a petal from
+                  this flower for the perfect color every time . . . Morbi vehicula
+                  feugiat enim, non feugiat ligula consectetur nec. Integer nunc
+                  nibh, dictum laoreet iaculis vitae, suscipit vel nulla.
+                  Nulla posuere nunc sem, vel consequat tellus cursus sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex12" class="modal fade">
+        <div class="modal-dialog" role:"document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="img/modal12.jpg" alt="Cigarettes"/>
+              <div class="cardbody">
+                <h3> QUIT SMOKING! </h3>
+                <p>Cut it out! Those who smoke regularly are at risk of lung cancer and
+                  other terrible health conditions . . . Morbi vehicula
+                  feugiat enim, non feugiat ligula consectetur nec. Integer nunc
+                  nibh, dictum laoreet iaculis vitae, suscipit vel nulla.
+                  Nulla posuere nunc sem, vel consequat tellus cursus sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardgrid">
+        <div class="card">
+          <img src="img/modal1.jpg" alt="Star Flowers"/>
+          <h3>STAR FLOWERS</h3>
+          <p>That's right, these flowers look like little stars.
+          A perfect gift for that special someone.</p>
+          <button data-modal="#ex1">OPEN</button>
+        </div>
+        <div class="card">
+          <img src="img/modal2.jpg" alt="A Cow"/>
+          <h3>MENACING COW</h3>
+          <p>She knows your secrets. Don't you worry, she won't tell
+            anyone. But she knows.</p>
+          <button data-modal="#ex2">OPEN</button>
+        </div>
+        <div class="card">
+          <img src="img/modal3.jpg" alt="A Bird"/>
+          <h3>INTERESTING BIRD</h3>
+          <p>I'm not entirely sure what species of bird this is, but it's
+            certainly unique and nice to look at.</p>
+          <button data-modal="#ex3">OPEN</button>
+        </div>
+        <div class="card">
+          <img src="img/modal4.jpg" alt="A tired dog"/>
+          <h3>TIME FOR A NAP</h3>
+          <p>This old boy has been playing all day. It's time for this
+            sleepy dog to take a nap.</p>
+          <button data-modal="#ex4">OPEN</button>
+        </div>
+        <div class="card">
+          <img src="img/modal5.jpg" alt="Miami Sunset"/>
+          <h3>THE SUN SETS OVER MIAMI</h3>
+          <p>A man in a floral print button-down and khakis rolls into frame.
+            Synths can be heard in the background.</p>
+          <button data-modal="#ex5">OPEN</button>
+        </div>
+        <div class="card">
+          <img src="img/modal6.jpg" alt="Lighouse Island"/>
+          <h3>A QUAINT ISLAND</h3>
+          <p>This little island with a small house and lighthouse has all
+            you need to enjoy relaxing days. Sometimes less is more.</p>
+          <button data-modal="#ex6">OPEN</button>
+        </div>
+        <div class="card">
+          <img src="img/modal7.jpg" alt="Snowy Mountain"/>
+          <h3>ON THE MOUNTAIN WHERE I STAY...</h3>
+          <p>There ain't no night or day. Just a golden glowing radiance that
+          scares away the pain, and I am home.</p>
+          <button data-modal="#ex7">OPEN</button>
+        </div>
+        <div class="card">
+          <img src="img/modal8.jpg" alt="Traditional Architecture"/>
+          <h3>TRADITIONAL ARCHITECTURE</h3>
+          <p>It was regal, it was bulky, it was marvellous. Traditional architecture
+            was an artform, and a statement of class.</p>
+          <button data-modal="#ex8">OPEN</button>
+        </div>
+        <div class="card">
+          <img src="img/modal9.jpg" alt="Sunny Beach"/>
+          <h3>SURF'S UP!</h3>
+          <p>At a beautiful beach on a vibrant day, why not hit the waves?
+            It's a shame we can't surf all the time.</p>
+          <button data-modal="#ex9">OPEN</button>
+        </div>
+        <div class="card">
+          <img src="img/modal10.jpg" alt="Small Turtle"/>
+          <h3>LITTLE MAN</h3>
+          <p>How could you not like this handsome little rascal? He is
+            literally the definition of the word "flawless".</p>
+          <button data-modal="#ex10">OPEN</button>
+        </div>
+        <div class="card">
+          <img src="img/modal11.jpg" alt="Rainbow Flower"/>
+          <h3>WONDROUS FLOWER</h3>
+          <p>Forget color wheels and color pickers. Just pick a petal from
+            this flower for the perfect color every time.</p>
+          <button data-modal="#ex11">OPEN</button>
+        </div>
+        <div class="card">
+          <img src="img/modal12.jpg" alt="Cigarettes"/>
+          <h3>QUIT SMOKING!</h3>
+          <p>Cut it out! Those who smoke regularly are at risk of lung cancer and
+            other terrible health conditions.</p>
+          <button data-modal="#ex12">OPEN</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2021 Lynden Millington &nbsp;|&nbsp; All photos from <a href="https://www.freeimages.com/">freeimages.com</a></p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script defer>
+      $('#menu').click(function(){
+        var x = document.getElementById("main-nav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        }
+        else {x.className = "topnav";}
+      });
+      $('button').click(function(){
+        $($(this).data('modal')).modal('show');
+      });
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+  </body>
+
+</html>

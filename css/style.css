@@ -1,0 +1,284 @@
+:root {
+  --accent: #69ccf5;
+  --bar: #2D333B;
+  --bg: #1C2128;
+  --card: #fff;
+  --text: #38536E;
+  --rev-text: #CDD9E5;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  width: 100%;
+  margin: 0px;
+}
+i.fas {
+  padding: 0 .33em;
+}
+
+.topnav {
+  padding-top: .25rem;
+  padding-bottom: .5rem;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 20px;
+  background-color: var(--bar);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  z-index: 1000;
+  width: 100%;
+}
+a.nav-item {
+  position: relative;
+  top: 4px;
+  text-align: center;
+  padding: .75em 0;
+  margin: auto 0;
+  color: var(--rev-text);
+  transition: color 250ms ease-in-out;
+  font-weight: normal;
+}
+a.nav-item:hover {
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: bolder;
+}
+.label {
+  font-size: 1rem;
+}
+.nav-item.trigram {
+  display: none;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+}
+/* End of nav bar */
+
+.slideshow {
+  width: 80%;
+  height: auto;
+  position: relative;
+  margin: auto;
+  border: 20px solid var(--card);
+  border-radius: 6px;
+  align-items: center;
+}
+.slides {
+  display: none;
+}
+.slideshow img{
+  max-width: 100%;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: var(--bar);
+  opacity: 80%;
+}
+.text {
+  color: var(--rev-text);
+  font-size: 24px;
+  padding: 8px 12px;
+  margin-bottom: -8px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+}
+.numbertext {
+  margin-top: .5rem;
+  margin-left: .5rem;
+  color: var(--rev-text);
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  background: rgba(0,0,0,0.4);
+  border-radius: 12px;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: var(--rev-text);
+}
+.slides.fader {
+  animation: slideFader .3s;
+}
+@keyframes slideFader {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* End of slideshow */
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 90%;
+  max-width: 100%;
+  animation: fadeIn 1s;
+}
+.modal-content{
+  background-color: var(--card);
+  color: var(--text);
+  margin: 1rem auto;
+  padding: 1em;
+  width: 90%;
+  border-radius: 6px;
+}
+.modal-content h3{
+  font-size: 24px;
+  font-weight: 900;
+}
+.modal-content p{
+  font-size: 20px;
+}
+@keyframes fadeIn{
+  0% {opacity:0;}
+  100% {opacity:.9;}
+}
+.modal-body{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
+}
+.modal-body img{
+  margin-bottom: 1.5em;
+  width: 100%;
+  height: auto;
+}
+.modal-dialog{width:100%; margin: auto;}
+.close-modal{border: 2px solid var(--rev-text); border-radius:100%}
+.close-modal:hover {
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: bolder;
+  border: 3px solid var(--accent);
+}
+
+.cardbody{
+  align-self: center;
+}
+.cardbody h3{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.cardgrid{
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+  margin: auto;
+  width: 90%;
+}
+.card{
+  background-color: var(--card);
+  border-radius: 4px;
+  align-items: center;
+  padding: 1rem;
+}
+.card img{
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  border-radius: 4px;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--rev-text);
+}
+.card h3{
+  font-size: 20px;
+  font-weight: 900;
+}
+.card button{
+  background: none;
+  display: block;
+  margin: auto;
+  margin-top: 1.5rem;
+  padding: .5rem 1rem;
+  border-radius: 8px;
+}
+.card button:hover{
+  padding: .6rem 1.2rem;
+  border-color: var(--accent);
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 700;
+  border-width: 3px;
+  margin-top: -.1rem;
+}
+/* End of modals */
+
+footer{
+  margin-top: 1rem;
+  background-color: var(--bar);
+  color: var(--rev-text);
+  text-align: center;
+  padding: 0.25rem;
+}
+footer a{
+  color: var(--accent);
+}
+
+@media screen and (max-width: 767px) {
+  .topnav {padding-top: 0;}
+  .topnav a, .topnav span {display: none;}
+  .topnav a.trigram {display:inherit; position:absolute; right:4%; font-size:2em; padding: .25em; background:var(--prime);}
+  .topnav.responsive {align-items: center;}
+  .topnav.responsive a, .topnav.responsive span {display:inherit;}
+  .topnav.responsive a:first-child {margin-top:1em;}
+  .topnav.responsive a:not(:last-child) {display:inherit; padding-top:1em;}
+  .topnav.responsive a.more {margin-bottom: 1em;}
+  .topnav.responsive a.trigram {visibility:hidden; transition:none;}
+  .topnav.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;}
+  .slideshow {display: none;}
+  .dots {display: none;}
+}
+
+@media screen and (min-width: 550px) {
+  .cardgrid {grid-template-columns: repeat(2, 1fr);}
+}
+
+@media screen and (min-width: 768px) {
+  .topnav {display: flex; flex-direction: row; justify-content: space-between;}
+  .cardgrid {grid-template-columns: repeat(3, 1fr);}
+}
+@media screen and (min-width: 990px) {
+  .cardgrid {grid-template-columns: repeat(4, 1fr);}
+}
+@media screen and (min-width: 1280px) {
+  .cardgrid {grid-template-columns: repeat(4, 1fr);}
+  .modal-body {grid-template-columns: 3fr 2fr;}
+}
